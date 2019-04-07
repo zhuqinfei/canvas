@@ -11,6 +11,9 @@ ul,ol{list-style: none}
   }
   body{
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   .actions{
     position:fixed;
@@ -41,6 +44,9 @@ ul,ol{list-style: none}
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   margin:10px 0;
   transition:all 0.3s;
+}
+.colors>li.black{
+  background:black;
 }
 .colors>li.red{
   background:red;
@@ -73,4 +79,9 @@ ul,ol{list-style: none}
   height: 0;
   width: 20px;
   border-top :5px solid black;
+}
+.sizes>li.thick2{
+  height: 0;
+  width: 20px;
+  border-top :7px solid black;
 }

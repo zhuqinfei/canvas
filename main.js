@@ -1,3 +1,6 @@
+document.body.ontouchstart=function(){
+    eee.preventDefault()
+}
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
 var lineWidth = 3
@@ -20,21 +23,31 @@ eraser.onclick = function () {
 }
 
 //三种画笔颜色
+black.onclick = function () {
+    context.strokeStyle = "black"
+    black.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
 red.onclick = function () {
     context.strokeStyle = "red"
     red.classList.add('active')
+    black.classList.remove('active')
     green.classList.remove('active')
     blue.classList.remove('active')
 }
 green.onclick = function () {
     context.strokeStyle = "green"
     green.classList.add('active')
+    black.classList.remove('active')
     red.classList.remove('active')
     blue.classList.remove('active')
 }
 blue.onclick = function () {
     context.strokeStyle = "blue"
     blue.classList.add('active')
+    black.classList.remove('active')
     green.classList.remove('active')
     red.classList.remove('active')
 }
@@ -45,6 +58,9 @@ thin.onclick = function () {
 }
 thick.onclick = function () {
     lineWidth = 5
+}
+thick2.onclick = function () {
+    lineWidth = 7
 }
 
 //清空屏幕
